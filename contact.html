@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+    <title>'t Boskaboutertje</title>
+    <link rel="stylesheet" type="text/css" href="css/screen_styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/screen_layout_large.css" />
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)" href="css/screen_layout_small.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:800px)" href="css/screen_layout_medium.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/farinspace/jquery.imgpreload.min.js"></script>
+    <script type="text/javascript" src="js/design.js"></script>
+    <script type="text/javascript" src="js/website.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="/images/KabouterFavicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/KabouterFavicon.png" />
+
+</head>
+
+<body>
+
+    <div class="page">
+        <header>
+            <div id="hero"></div>
+            <a class="mobile_menu"></a>
+            <a class="logo" href="#"></a>
+        </header>
+        <nav>
+            <div>
+                <a href="index.html">Welkom</a>
+                <a href="visie.html">Visie</a>
+                <a href="openingstijd.html">Openingstijden en Tarieven</a>
+                <a class="active" href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="mainbox">
+            <div class="contactbox">
+                <h1>Contact</h1>
+                <p>Op deze pagina kunt u contact met ons opnemen. Klik hieronder op het contact formulier als u ons een vraag wilt stellen.</p>
+                <p>Selecteer het solicitatie formulier als u bij ons wilt komen werken.</p>
+                <p>Klik op het inschrijf formulier als u uw kind wilt inschrijven bij ons kinderdag verblijf.</p>
+                <ol id="formulieren">
+                    <li onclick="changeForm(event,this,'contactform');">Contact Formulier</li><br>
+                    <li onclick="changeForm(event,this,'solicitatieform');">Solicitatie Formulier</li><br>
+                    <li onclick="changeForm(event,this,'inschrijfform');">Inschrijf Formulier</li><br>
+                </ol>
+            </div>
+
+            <div class="formbox">
+                <div id="contactform" class="formulier">
+                    <h2>Contact Formulier</h2>
+                    <form action="action_page.php">
+                        <input type="text" id="fname" name="firstname" placeholder="Voornaam">
+
+                        <input type="text" id="lname" name="lastname" placeholder="Achternaam">
+
+                        <select id="plaats" name="plaats">
+                            <option value="alkmaar">Alkmaar</option>
+                            <option value="amsterdam">Amsterdam</option>
+                            <option value="egmond">Egmond</option>
+                        </select>
+
+                        <textarea id="subject" name="subject" placeholder="Uw vraag.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Verzenden">
+
+                    </form>
+                </div>
+                <div id="inschrijfform" class="formulier">
+                    <h2>Inschrijf formulier</h2>
+                    <form action="action_page.php">
+
+                        <h3>Gegevens ouders/verzorgers</h3>
+
+                        <input type="text" id="Voorletters" name="Voorletters" placeholder="Voorletters"><br>
+
+                        <input type="text" id="Voornaam" name="Voornaam" placeholder="Voornaam"><br>
+
+                        <input type="text" id="Tussenvoegsel" name="Tussenvoegsel" placeholder="Tussenvoegsel"><br>
+
+                        <input type="text" id="Achternaam" name="Achternaam" placeholder="Achternaam"><br>
+
+                        <input type="radio" name="Geslacht" value="man" checked> Man<br>
+                        <input type="radio" name="Geslacht" value="vrouw"> Vrouw<br>
+
+                        <input type="text" id="Adres" name="Adres" placeholder="Adres"><br>
+
+                        <input type="text" id="Postcode" name="Postcode" placeholder="Postcode"><br>
+
+                        <input type="text" id="Geboortedatum" name="Geboortedatum" placeholder="Geboortedatum"><br>
+
+
+                        <input type="text" id="Relatie" name="Relatie" placeholder="Relatie met kind"><br>
+
+
+                        <input type="text" id="Telefoonnummerprive" name="Telefoonnummerprive" placeholder="Telefoonnummer privé"><br>
+
+
+                        <input type="text" id="Telefoonnummerwerk" name="Telefoonnummerwerk" placeholder="Telefoonnummer werk"><br>
+
+
+                        <input type="text" id="Noodtelefoonnummer" name="Noodtelefoonnummer" placeholder="Noodtelefoonnummer"><br>
+
+
+                        <input type="text" id="E-mail" name="E-mail" placeholder="E-mail"><br>
+
+
+                        <input type="text" id="Naamrekeninghouder" name="Naamrekeninghouder" placeholder="Naam rekeninghouder"><br>
+
+
+                        <input type="text" id="IBAN" name="IBAN" placeholder="IBAN"><br>
+
+
+                        <input type="text" id="BIC" name="BIC" placeholder="BIC"><br>
+
+
+                        <input type="text" id="BSN" name="BSN" placeholder="BSN"><br>
+
+                        <h3>Gegevens Kind:</h3>
+
+                        <input type="text" id="kVoorletters" name="kVoorletters" placeholder="Voorletters"><br>
+
+                        <input type="text" id="kVoornaam" name="kVoornaam" placeholder="Voornaam"><br>
+
+                        <input type="text" id="kTussenvoegsel" name="kTussenvoegsel" placeholder="Tussenvoegsel"><br>
+
+                        <input type="text" id="kAchternaam" name="kAchternaam" placeholder="Achternaam"><br>
+
+                        <input type="text" id="kGeboortedatum" name="kGeboortedatum" placeholder="Geboortedatum"><br>
+
+                        <input type="radio" name="kGeslacht" value="jongen" checked> Jongen<br>
+                        <input type="radio" name="kGeslacht" value="meisje"> Meisje<br><br>
+
+
+
+
+                        <input type="submit" value="Verzenden">
+
+                    </form>
+                </div>
+                <div id="solicitatieform" class="formulier">
+                    <h2>Solicitatie Formulier</h2>
+                    <form action="action_page.php">
+
+                        <input type="text" id="fname" name="firstname" placeholder="Voornaam">
+
+                        <input type="text" id="lname" name="lastname" placeholder="Achternaam">
+
+                        <input type="text" id="birthd" name="birthd" placeholder="Geboortedatum">
+
+                        <input type="text" id="birthp" name="birthp" placeholder="Geboorteplaats">
+
+                        <input type="radio" name="Geslacht" value="man" checked> Man<br>
+                        <input type="radio" name="Geslacht" value="vrouw"> Vrouw<br>
+
+                        <input type="text" id="natio" name="natio" placeholder="Nationaliteit">
+
+                        <input type="text" id="street" name="street" placeholder="Straat en huisnummer">
+
+                        <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+
+                        <input type="text" id="gemeente" name="gemeente" placeholder="Gemeente">
+
+                        <input type="text" id="tel" name="tel" placeholder="Telefoon/GSM">
+
+                        <input type="text" id="email" name="email" placeholder="Email">
+
+                        <p>Reeds behaalde diploma / getuigschriften.
+                            Kruis aan over welk
+                            diploma/studiebewijs/attest je beschikt.
+                        </p>
+                        <input type="radio" name="Diploma" value="1" checked>7de jaar ‘kinderzorg’, ‘internaatswerking’ of ‘leefgroepenwerking’<br>
+
+                        <input type="radio" name="Diploma" value="1" checked>6de jaar ‘sociale en technische wetenschappen’, ‘jeugd -engehandicaptenzorg’, of ‘gezondheids- en welzijnswetenschappen’
+                        <br>
+
+                        <input type="radio" name="Diploma" value="2" checked>Opleiding ‘jeugd - en gehandicaptenzorg’ van het volwassenenonderwijs <br>
+
+                        <input type="radio" name="Diploma" value="3" checked>Opleiding ‘begeleider buitenschoolse opvang’ van het volwassenen - onderwijs, VCOK of VDKO. <br>
+
+                        <input type="radio" name="Diploma" value="4" checked>Derde jaar van de vierde graad ‘verpleegkunde’ <br>
+
+                        <input type="radio" name="Diploma" value="5" checked>Hoger onderwijs van één of meer cycli <br>
+
+                        <input type="radio" name="Diploma" value="6" checked>Hoger onderwijs van sociale promotie van het korte type <br>
+
+                        <input type="radio" name="Diploma" value="7" checked>Universitair onderwijs van één of meer cycli <br>
+
+                        <input type="radio" name="Diploma" value="8" checked>Bacheloropleiding <br>
+
+                        <input type="radio" name="Diploma" value="9" checked>Masteropleiding <br><br>
+
+                        <input type="text" id="andere" name="andere" placeholder="Andere Namelijk..">
+
+                        <p>Studiebewijs / attest van:</p>
+                        <input type="radio" name="studiebewijs" value="1" checked>1ste en 2de studiejaar van de opleiding ‘leraar kleuteronderwijs’, ‘leraar lager onderwijs’ of ‘graduaat orthopedagogie’
+                        <br>
+                        <input type="radio" name="studiebewijs" value="2" checked>Alle modules die behoren tot het 1ste en 2de studiejaar van de opleiding bachelor ‘onderwijs’ (kleuter of lagere school) of bachelor ‘ortho - pedagogie’. <br>
+
+                        <input type="radio" name="studiebewijs" value="3" checked> 1ste en 2de studiejaar van de opleiding ‘orthopedagogiek’ van het volwassenenonderwijs<br>
+
+                        <input type="radio" name="studiebewijs" value="4" checked> Cursus ‘verantwoordelijke kinderopvang’ georganiseerd door het VIZO in Syntra -centra ‘begeleider buitenschoolse opvang’ (ervaringsbewijs)<br><Br>
+                        <input type="text" id="sandere" name="sandere" placeholder="Andere Namelijk..">
+
+                        <label for="ervaring">Ervaring</label>                        <textarea id="ervaring" name="ervaring" placeholder="Geef zo volledig en gedetailleerd mogelijk weer over welke relevante ervaring je beschikt in het werken met kinderen (leiding in jeugdbeweging, speelpleinwerking, sportkampen, stages, vrijwilligerswerk)" style="height:200px"></textarea>
+
+                        <label for="motivatie">Motivatie</label>
+                        <textarea id="motivatie" name="motivatie" placeholder="Leg uit waarom je solliciteert voor deze job:" style="height:200px"></textarea>
+
+                        <input type="submit" value="Verzenden">
+                        </Br>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+</body>
+    <footer>
+            <p>’t Boskaboutertje &#9864; kdvhetboskaboutertje@gmail.com &#9864; 1856 GM Egmond &#9864; Bospadweg 53</p>
+            &copy; Orbit Webdesign
+        </footer>
+
+</html>
